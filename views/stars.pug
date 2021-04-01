@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p rows: #{query.rows} and columns: #{query.cols}
-    -
+  -
         rows= Number(query.rows)
         col= Number(query.cols)
     if !Number.isInteger(rows)
@@ -22,3 +22,4 @@ block content
                      td= j 
                  -}              
             - }
+    
