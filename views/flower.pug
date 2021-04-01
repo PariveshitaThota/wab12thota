@@ -23,7 +23,13 @@ block content
                     },                    
                 ]
             each list,index in flower
-                div(class="col-sm-2") #{list.type}
-                div(class="col-sm-2") #{list.colour}
-                div(class="col-sm-2") #{list.cost}
-  
+                div(class="col-sm-2" onclick=`buy(${index})`) #{list.type}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{list.colour}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{list.cost}
+                 
+        script.
+     
+             function buy(itemNo)
+             {
+             alert(`You purchased Item ${itemNo+1}`)
+             }
